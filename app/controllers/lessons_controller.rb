@@ -7,7 +7,7 @@ class LessonsController < ApplicationController
 
   private
 
-  def user_enrolled?
+  def user_enrolled!
     if current_user.enrolled_in?(current_lesson.section.course) != true
       redirect_to :back, :alert => "You must be enrolled to view lesson!"
     end
