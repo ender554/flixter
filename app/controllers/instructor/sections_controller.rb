@@ -13,14 +13,14 @@ class Instructor::SectionsController < ApplicationController
   end
 
   def update
-    current_section.update_attribute(section_params)
+    current_section.update_attributes(section_params)
     render plain: 'updated!'
   end
 
   private
 
-  def require_authorization_for_current_section
-    if current_section.section.course.user != current_user
+  def require_authorized_for_current_section
+    if current_section.course.user != current_user
       render plain: 'Unauthorized', status: :unauthorized
     end
   end
