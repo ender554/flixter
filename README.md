@@ -2,5 +2,5 @@
 
 
 Joshua Adams
-And I hate carbs!
+And I hate most carbs!
 -Josh
